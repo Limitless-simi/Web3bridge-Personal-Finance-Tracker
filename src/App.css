@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
+/* 🌿 Global styles */
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #8e9eab);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app-container {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+h1 {
+  text-align: center;
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+}
+
+/* 🧾 Transaction Form */
+.transaction-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.transaction-form input,
+.transaction-form select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.transaction-form input:focus,
+.transaction-form select:focus {
+  border-color: #4caf50;
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+}
+
+.transaction-form button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.transaction-form button:hover {
+  background-color: #43a047;
+  transform: translateY(-1px);
+}
+
+/* 📋 Transaction Table */
+.transaction-list {
+  margin-top: 25px;
+}
+
+.transaction-list h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.transaction-list table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.transaction-list th,
+.transaction-list td {
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.transaction-list thead {
+  background-color: #4caf50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.transaction-list tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transaction-list tbody tr:hover {
+  background-color: #e8f5e9;
+}
+
+.income {
+  color: #388e3c;
+  font-weight: 600;
+}
+
+.expense {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+/* 📈 Chart */
+.summary-chart {
+  margin: 30px 0;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.summary-chart h2 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* 📤 CSV Export Button */
+.export-btn {
+  background: #2196f3;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  display: block;
+  margin: 25px auto;
+  transition: all 0.3s ease;
+}
+
+.export-btn:hover {
+  background: #1976d2;
+  transform: translateY(-2px);
 }
