@@ -1,3 +1,6 @@
+Demo link to test it out:
+https://web3bridge-simileoluwa.vercel.app/
+
 💰 Personal Finance Tracker
 
 A web application for tracking personal finances, enabling users to monitor and analyze their income and expenses with detailed categorization, filtering, and data visualization.
